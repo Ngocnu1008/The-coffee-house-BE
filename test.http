@@ -1,0 +1,92 @@
+GET http://localhost:5000
+
+###
+POST http://localhost:5000/general/login
+Content-Type: application/json
+
+{
+    "phone": "3473247622", 
+    "password": "1111"
+}
+
+### 
+POST http://localhost:5000/general/register 
+Content-Type: application/json
+
+{
+    "name": "Ngoc Nu", 
+    "address": "d7", 
+    "email": "tranthingocnu10081998@gmail.com", 
+    "phone": "0339700446", 
+    "password": "12345", 
+    "confirm_password": "12345"
+} 
+
+###
+POST http://localhost:5000/general/otp
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRyYW50aGluZ29jbnUxMDA4MTk5OEBnbWFpbC5jb20iLCJuYW1lIjoiTmdvYyBOdSIsImFkZHJlc3MiOiJkNyIsInBob25lIjoiMDMzOTcwMDQ0NiIsImhhc2hQdyI6IiRhcmdvbjJpJHY9MTkkbT00MDk2LHQ9MyxwPTEkdWJ6MitKdTE2Z3F5NEEvMjRXbzdFZyRJZ0I1aDA5YWZnNkVtWGR6cDJDZnBnQ3QwS0pHMy8wRDIyUGhnYmw2ZzJBIiwiaWF0IjoxNjQyODMxMTQxLCJleHAiOjE2NDI4MzgzNDF9.cNJk0W6D8k6yLOHxzywZUdSvB_LTRrDpuSNOm-gooJw
+
+{
+    "otp": "860658"
+}
+
+###
+POST http://localhost:5000/admin/add-group
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoiMWY5NjI0ZjUtMThjNy00MjliLWE4MjQtMzAwMWVjMTc4ZTZhIiwiaXNfYWRtaW4iOmZhbHNlLCJpYXQiOjE2NDE3MDA1NjB9.9YT65zQN0f81lm7_GSJeSGbK4Xyh-V0Tygxw_AUpPaU
+
+{
+    "name": "nuoc ep"
+}
+
+###
+POST http://localhost:5000/admin/add-product
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im51ZGF2aWVzMTAwOEBnbWFpbC5jb20iLCJuYW1lIjoibmdvY251MSIsImFkZHJlc3MiOiJkNyIsInBob25lIjoiMTIzNDU2NzgiLCJoYXNoUHciOiIkYXJnb24yaSR2PTE5JG09NDA5Nix0PTMscD0xJCswNHRBdWdTcFU5aWlwMC9QZXUrdUEkRkJkYUVsdkIxM1FkS2FqY2VCdGc4c09TMlFKcXJZLy9ERlFsbGFzaEpqNCIsImlhdCI6MTY0MTU2MzYxNSwiZXhwIjoxNjQxNTcwODE1fQ.oHOkzlo6DQYweHOnCluZQNmEaauqKUIOtHuNinOkM8w
+
+{
+    "id_group": "725f529d-9a10-42c3-a6c5-68d5ec601dc4",
+    "name": "tra dao trai cay",
+    "cost": "20000", 
+    "price": "35000", 
+    "description": "ngon", 
+    "story": "ok", 
+    "attachment": "https://product.hstatic.net/1000075078/product/1640270462_combo-qua-tet-2022_a11c523513a847899608f9196886554e_large.jpg"
+}
+
+###
+POST http://localhost:5000/admin/edit-product
+Content-Type: application/json
+
+{
+    "id": 1, 
+    "id_group": "20caa3f6-2b49-4480-bd4c-fbcb63028bc3",
+    "name": "tra dao",
+    "cost": "25000", 
+    "price": "35000", 
+    "description": "ngon hon", 
+    "story": "ok", 
+    "attachment": "https://product.hstatic.net/1000075078/product/1640270462_combo-qua-tet-2022_a11c523513a847899608f9196886554e_large.jpg"
+}
+
+
+###
+DELETE http://localhost:5000/admin/delete-product/1
+
+
+### 
+POST http://localhost:5000/admin/edit-group 
+Content-Type: application/json
+
+{
+    "id": "740200e0-b36c-4442-9c88-9419f2c13fc3", 
+    "name": "tra"
+} 
+
+###
+DELETE http://localhost:5000/admin/delete-group/?id=725f529d-9a10-42c3-a6c5-68d5ec601dc4
+
+###
+GET http://localhost:5000/admin/all-product
+//HỎI EDIT, DELETE KHÔNG CÓ TOKEN (Auth.middleware)

@@ -1,0 +1,38 @@
+[2022-01-05 18:16:46] [[31merror[39m] notNull Violation: ParentType.name cannot be null
+[2022-01-09 10:47:00] [[31merror[39m] SequelizeValidationError: notNull Violation: User.name cannot be null,
+notNull Violation: User.phone cannot be null,
+notNull Violation: User.email cannot be null,
+notNull Violation: User.password cannot be null,
+notNull Violation: User.address cannot be null
+    at InstanceValidator._validate (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async InstanceValidator._validateAndRunHooks (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:54:12)
+    at async model.save (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\model.js:2336:7)
+    at async Function.create (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\model.js:1312:12)
+    at async AuthoOTP (D:\IT_studies\All_projects\final_project\server\controller\login.controller.js:123:9)
+[2022-01-09 10:47:15] [[31merror[39m] SequelizeValidationError: notNull Violation: User.name cannot be null,
+notNull Violation: User.phone cannot be null,
+notNull Violation: User.email cannot be null,
+notNull Violation: User.password cannot be null,
+notNull Violation: User.address cannot be null
+    at InstanceValidator._validate (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async InstanceValidator._validateAndRunHooks (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:54:12)
+    at async model.save (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\model.js:2336:7)
+    at async Function.create (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\model.js:1312:12)
+    at async AuthoOTP (D:\IT_studies\All_projects\final_project\server\controller\login.controller.js:123:9)
+[2022-01-09 10:47:59] [[31merror[39m] SequelizeValidationError: notNull Violation: User.name cannot be null,
+notNull Violation: User.phone cannot be null,
+notNull Violation: User.email cannot be null,
+notNull Violation: User.password cannot be null,
+notNull Violation: User.address cannot be null
+    at InstanceValidator._validate (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:50:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async InstanceValidator._validateAndRunHooks (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:60:7)
+    at async InstanceValidator.validate (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\instance-validator.js:54:12)
+    at async model.save (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\model.js:2336:7)
+    at async Function.create (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\model.js:1312:12)
+    at async AuthoOTP (D:\IT_studies\All_projects\final_project\server\controller\login.controller.js:123:9)
+[2022-02-12 16:19:30] [[31merror[39m] Cannot read properties of undefined (reading 'filename')

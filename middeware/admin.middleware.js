@@ -47,7 +47,7 @@ function AddgroupMiddleware (req, res, next) {
 
 function EditGroupMiddleware (req, res, next) {
     var { id, name } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     if(!id || !name) {
         return BadRequest(res, "argument invalid");
     };

@@ -36,3 +36,4 @@ notNull Violation: User.address cannot be null
     at async Function.create (D:\IT_studies\All_projects\final_project\server\node_modules\sequelize\dist\lib\model.js:1312:12)
     at async AuthoOTP (D:\IT_studies\All_projects\final_project\server\controller\login.controller.js:123:9)
 [2022-02-12 16:19:30] [[31merror[39m] Cannot read properties of undefined (reading 'filename')
+[2022-02-16 22:36:56] [[31merror[39m] req is not defined

@@ -16,7 +16,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());//dữ liệu từ client gửi lên server được chuyển đổi thành Định dạng dữ liệu json
 app.use("/static", express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: true }));//mã hóa dữ liệu gửi xuống server là string or array
+app.use(express.urlencoded({ extended: true }));//mã hóa dữ liệu gửi lên server là string or array
 
 //all route requests
 Route(app);

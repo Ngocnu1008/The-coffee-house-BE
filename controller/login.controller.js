@@ -32,7 +32,7 @@ async function LoginAdmin (req, res) {
                 return BadRequest(res, "password is not correct");
             }
 
-            //generate jwt: 
+            //generate jwt:  
             const token = jwt.sign(
                 { id_user: finduser.dataValues.id, 
                   is_admin: finduser.dataValues.is_admin
@@ -112,7 +112,7 @@ async function AuthoOTP (req, res) {
             otp, 
             email: decode.email,
         })
-        //so sánh thông tin của bảng với thông tin mà Register tạo token (email, name...) sau khi được decode (mã hóa) có phải tt của ng đã đk không
+        //so sánh thông tin của bảng OTPRegister với thông tin mà Register tạo token (email nên decode.email sau khi được mã hóa) có phải tt của ng đã đk không
         if(!count) {
             return BadRequest(res, "request invalid");
         }
@@ -130,6 +130,7 @@ async function AuthoOTP (req, res) {
             phone, 
             email,
             password: hashPw
+            
         });
 
         Success(res, { auth_otp: true});

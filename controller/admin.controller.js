@@ -134,7 +134,7 @@ async function EditGroup(req, res) {
         where: { id },
       }
     );
-    Success(res, { success: true });
+    Success(res, { success: true }); 
   } catch (error) {
     logger.error(error.message);
     console.error(error);
@@ -150,7 +150,7 @@ async function DeleteGroup(req, res) {
 
     //check parent's product in Product exist?
     const check = await Product.findAll({
-      where: { id_group: id },
+      where: { id_group: id }, 
     });
 
     if (check.length > 0) {

@@ -47,15 +47,15 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im51ZGF2a
 
 {
     "id_group": "725f529d-9a10-42c3-a6c5-68d5ec601dc4",
-    "name": "tra dao trai cay",
-    "cost": "20000", 
-    "price": "35000", 
-    "description": "ngon", 
-    "story": "ok", 
+    "name": "tra sua chan trau",
+    "cost": "25000", 
+    "price": "60000", 
+    "description": "ngon bo re Dòng tã Moony Natural là phiên bản cao cấp hơn, còn mềm và mỏng hơn nhiều nữa, nắm bắt xu thế ưu tiên chọn sản phẩm hữu cơ của thị trường, đây sẽ là lựa chọn mang đến sự an tâm tuyệt đối cho mẹ.", 
+    "story": "Dòng tã Moony Natural là phiên bản cao cấp hơn, còn mềm và mỏng hơn nhiều nữa, nắm bắt xu thế ưu tiên chọn sản phẩm hữu cơ của thị trường, đây sẽ là lựa chọn mang đến sự an tâm tuyệt đối cho mẹ.", 
     "attachment": "https://product.hstatic.net/1000075078/product/1640270462_combo-qua-tet-2022_a11c523513a847899608f9196886554e_large.jpg"
 }
 
-###
+###-
 POST http://localhost:5000/admin/edit-product
 Content-Type: application/json
 
@@ -90,3 +90,31 @@ DELETE http://localhost:5000/admin/delete-group/?id=725f529d-9a10-42c3-a6c5-68d5
 ###
 GET http://localhost:5000/admin/all-product
 //HỎI EDIT, DELETE KHÔNG CÓ TOKEN (Auth.middleware)
+
+###
+POST http://localhost:5000/customer/create
+Content-Type: application/json 
+
+{
+    "name": "tuyet", 
+    "phone": "42345", 
+    "email": "tuyet@gmail.com", 
+    "password": "12345", 
+    "confirmPassword": "12345", 
+    "address": "d10"
+}
+
+###
+POST http://localhost:5000/customer/edit-customer
+Content-Type: application/json
+
+{
+    "name": "ngoc", 
+    "phone": "12345",
+    "password": "123", 
+    "email": "jhfdj",
+    "address": "d7"
+}
+
+### 
+DELETE http://localhost:5000/customer/delete-customer/?id=17f3fc8c-5dd0-43b3-aca6-b8eae8df1549
